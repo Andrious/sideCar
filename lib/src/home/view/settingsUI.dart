@@ -91,16 +91,6 @@ class _SettingsPageState extends StateX<SettingsPage>
     );
   }
 
-  Future<void> _SampleNavigationApp() async {
-    //
-    await Navigator.push(
-      context,
-      MaterialPageRoute<void>(
-        builder: (_) => const SampleNavigationApp(),
-      ),
-    );
-  }
-
   Widget get tabMap => ListView(
 //        mainAxisSize: MainAxisSize.max,
         children: [

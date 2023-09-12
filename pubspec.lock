@@ -179,14 +179,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_mapbox_navigation:
-    dependency: "direct main"
-    description:
-      name: flutter_mapbox_navigation
-      sha256: ce62accf6e012254e2f670b50983671948feaab4bd4af07e08b2e79615e5f366
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.9"
   flutter_material_color_picker:
     dependency: transitive
     description:
@@ -216,10 +208,11 @@ packages:
   fluttery_framework:
     dependency: "direct main"
     description:
-      path: "../../packages/fluttery_framework"
-      relative: true
-    source: path
-    version: "4.4.0"
+      name: fluttery_framework
+      sha256: "68761a2aeb30396c98b658675c4e65c1e6e3348b2108b3e9860927da62a68364"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.3.0+1"
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -232,10 +225,10 @@ packages:
     dependency: transitive
     description:
       name: go_router
-      sha256: "5668e6d3dbcb2d0dfa25f7567554b88c57e1e3f3c440b672b24d4a9477017d5b"
+      sha256: edbceb4c06758652fc9d12e58edb371cd977011b032e298dae0eb357167baad2
       url: "https://pub.dev"
     source: hosted
-    version: "10.1.2"
+    version: "9.1.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -589,10 +582,10 @@ packages:
     dependency: transitive
     description:
       name: state_extended
-      sha256: "3965a9e8bdcc0bf1eb78d5daaa95dab42ceb3d6669aa3be1897ba3f07dadfe59"
+      sha256: a5002f65edbaa5fac3d3b8dea6df9fe4526fcde184de280e2a322902b1cf68c8
       url: "https://pub.dev"
     source: hosted
-    version: "4.6.1+1"
+    version: "3.5.0+1"
   stream_channel:
     dependency: transitive
     description:
@@ -777,14 +770,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
-  very_good_analysis:
-    dependency: transitive
-    description:
-      name: very_good_analysis
-      sha256: "9ae7f3a3bd5764fb021b335ca28a34f040cd0ab6eec00a1b213b445dae58a4b8"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.1.0"
   web:
     dependency: transitive
     description:

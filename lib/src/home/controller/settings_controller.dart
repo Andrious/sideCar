@@ -81,12 +81,12 @@ class SettingsController extends StateXController {
       onSelected: (value) async {
         switch (value) {
           case mapBox:
-            await Navigator.push(
-              lastContext!,
-              MaterialPageRoute<void>(
-                builder: (_) => const SampleNavigationApp(),
-              ),
-            );
+            // await Navigator.push(
+            //   lastContext!,
+            //   MaterialPageRoute<void>(
+            //     builder: (_) => const SampleNavigationApp(),
+            //   ),
+            // );
             break;
           default:
         }
