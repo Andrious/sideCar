@@ -15,7 +15,8 @@ import 'package:turf/helpers.dart';
 import 'page.dart';
 
 class AnimatedRoutePage extends ExamplePage {
-  AnimatedRoutePage() : super(const Icon(Icons.map), 'Animated route line');
+  const AnimatedRoutePage()
+      : super(const Icon(Icons.map), 'Animated route line');
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class AnimatedRoutePage extends ExamplePage {
 }
 
 class AnimatedRoute extends StatefulWidget {
-  const AnimatedRoute();
+  const AnimatedRoute({super.key});
 
   @override
   State createState() => AnimatedRouteState();
@@ -72,48 +73,49 @@ class AnimatedRouteState extends State<AnimatedRoute>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              FloatingActionButton(
-                  heroTag: null,
-                  onPressed: () {
-                    setState(() {
-                      trackLocation = !trackLocation;
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            FloatingActionButton(
+                heroTag: null,
+                onPressed: () {
+                  setState(() {
+                    trackLocation = !trackLocation;
+                    refreshTrackLocation();
+                  });
+                },
+                backgroundColor: trackLocation ? Colors.blue : Colors.grey,
+                child: const Icon(FontAwesomeIcons.locationCrosshairs)),
+            const SizedBox(height: 10),
+            FloatingActionButton(
+                heroTag: null,
+                onPressed: () {
+                  setState(() {
+                    showAnnotations = !showAnnotations;
+                    refreshCarAnnotations();
+                    if (showAnnotations) {
+                      trackLocation = false;
                       refreshTrackLocation();
-                    });
-                  },
-                  backgroundColor: trackLocation ? Colors.blue : Colors.grey,
-                  child: const Icon(FontAwesomeIcons.locationCrosshairs)),
-              const SizedBox(height: 10),
-              FloatingActionButton(
-                  heroTag: null,
-                  onPressed: () {
-                    setState(() {
-                      showAnnotations = !showAnnotations;
-                      refreshCarAnnotations();
-                      if (showAnnotations) {
-                        trackLocation = false;
-                        refreshTrackLocation();
-                      }
-                    });
-                  },
-                  backgroundColor: showAnnotations ? Colors.blue : Colors.grey,
-                  child: const Icon(CupertinoIcons.car_detailed)),
-            ],
-          ),
+                    }
+                  });
+                },
+                backgroundColor: showAnnotations ? Colors.blue : Colors.grey,
+                child: const Icon(CupertinoIcons.car_detailed)),
+          ],
         ),
-        body: MapWidget(
-          key: const ValueKey("mapWidget"),
-          resourceOptions: ResourceOptions(accessToken: MapsDemo.ACCESS_TOKEN),
-          cameraOptions: CameraOptions(zoom: 3.0),
-          styleUri: MapboxStyles.LIGHT,
-          textureView: true,
-          onMapCreated: _onMapCreated,
-          onStyleLoadedListener: _onStyleLoadedCallback,
-        ));
+      ),
+      body: MapWidget(
+        key: const ValueKey("mapWidget"),
+        resourceOptions: ResourceOptions(accessToken: MapsDemo.ACCESS_TOKEN),
+        cameraOptions: CameraOptions(zoom: 3.0),
+        styleUri: MapboxStyles.LIGHT,
+        textureView: true,
+        onMapCreated: _onMapCreated,
+        onStyleLoadedListener: _onStyleLoadedCallback,
+      ),
+    );
   }
 
   setLocationComponent() async {
