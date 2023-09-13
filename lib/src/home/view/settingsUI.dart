@@ -37,7 +37,7 @@ class _SettingsPageState extends StateX<SettingsPage>
                   size: 24,
                 ),
                 onPressed: () {
-                  Navigator.pop(context);
+//                  Navigator.pop(context);
                 },
               ),
             ),
@@ -84,11 +84,11 @@ class _SettingsPageState extends StateX<SettingsPage>
                   'Visibility',
                 ),
                 tabUI,
-                const Text(
-                  'System',
-                ),
+                // const Text(
+                //   'System',
+                // ),
 //// pk.eyJ1IjoiZ3RmcGVycnkiLCJhIjoiY2xtYXo1emdkMDJldjNqbXR2bDJwMTczaSJ9.geVJQ2wYWiltOT7WU7VWJA
-//                const MapsDemo(),
+                const MapsDemo(),
               ],
             ),
           ),

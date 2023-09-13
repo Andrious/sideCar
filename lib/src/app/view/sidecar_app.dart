@@ -42,8 +42,4 @@ class _SideCarAppState extends AppState {
           inInitAsync: () => Future.value(true), // Merely a test.
           inInitState: () {/* Optional inInitState() function */},
         );
-
-  /// Place a breakpoint to see how it's built
-  @override
-  Widget build(BuildContext context) => super.build(context);
 }

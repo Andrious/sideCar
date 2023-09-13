@@ -49,11 +49,11 @@ dependencies:
   google_fonts: ^5.0.0
 
   # https://pub.dev/packages/mapbox_gl
-  mapbox_gl: ^0.16.0
+#  mapbox_gl: ^0.16.0
 
   # https://pub.dev/packages/mapbox_maps_flutter
   # https://account.mapbox.com/access-tokens/
-#  mapbox_maps_flutter: ^0.4.4
+  mapbox_maps_flutter: ^0.4.4
 
   permission_handler: ^10.0.0
 

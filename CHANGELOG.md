@@ -1,4 +1,9 @@
 
+## 0.3.0
+September 13, 2023
+- Removed mapbox_gl
+- Returned mapbox_maps_flutter
+
 ## 0.2.0
 September 12, 2023
 - Add mapbox_gl package
