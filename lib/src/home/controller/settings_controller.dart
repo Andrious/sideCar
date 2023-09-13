@@ -83,8 +83,16 @@ class SettingsController extends StateXController {
           case mapBox:
             // await Navigator.push(
             //   lastContext!,
-            //   MaterialPageRoute<void>(
+            //   CupertinoPageRoute<void>(
+            //     fullscreenDialog: true,
             //     builder: (_) => const SampleNavigationApp(),
+            //   ),
+            // );
+            // await Navigator.push(
+            //   lastContext!,
+            //   CupertinoPageRoute<void>(
+            //     fullscreenDialog: true,
+            //     builder: (_) => const MyWidgetsApp(),
             //   ),
             // );
             break;

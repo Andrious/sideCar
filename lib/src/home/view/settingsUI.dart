@@ -17,33 +17,35 @@ class _SettingsPageState extends StateX<SettingsPage>
     con = controller as SettingsController;
   }
   late SettingsController con;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final scaffoldKey = GlobalKey<ScaffoldState>(debugLabel: 'Settings');
 
   @override
   Widget buildAndroid(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: Theme.of(context).shadowColor,
       appBar: AppBar(
         backgroundColor: Theme.of(context).shadowColor,
         automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_outlined,
-            color: Colors.white,
-            size: 24,
-          ),
-          onPressed: () {
-            if (kDebugMode) {
-              print('IconButton pressed ...');
-            }
-          },
+        leading: Row(
+          children: [
+            Expanded(
+              child: IconButton(
+                icon: const Icon(
+                  Icons.keyboard_double_arrow_left,
+                  color: Colors.white,
+                  size: 24,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
         ),
-        title: const Text(
-          'Settings',
-          textAlign: TextAlign.center,
-        ),
-//        actions: [con.popupMenuButton],
+        title: InkWell(onTap: () {}, child: const Text('Back')),
         centerTitle: false,
+//        actions: [con.popupMenuButton],
         elevation: 2,
       ),
       body: Column(
@@ -82,8 +84,11 @@ class _SettingsPageState extends StateX<SettingsPage>
                   'Visibility',
                 ),
                 tabUI,
-// pk.eyJ1IjoiZ3RmcGVycnkiLCJhIjoiY2xtYXo1emdkMDJldjNqbXR2bDJwMTczaSJ9.geVJQ2wYWiltOT7WU7VWJA
-                const MapsDemo(),
+                const Text(
+                  'System',
+                ),
+//// pk.eyJ1IjoiZ3RmcGVycnkiLCJhIjoiY2xtYXo1emdkMDJldjNqbXR2bDJwMTczaSJ9.geVJQ2wYWiltOT7WU7VWJA
+//                const MapsDemo(),
               ],
             ),
           ),

@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 0.1.0+2
+version: 0.2.0
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
@@ -48,9 +48,12 @@ dependencies:
   # https://pub.dev/packages/google_fonts
   google_fonts: ^5.0.0
 
+  # https://pub.dev/packages/mapbox_gl
+  mapbox_gl: ^0.16.0
+
   # https://pub.dev/packages/mapbox_maps_flutter
   # https://account.mapbox.com/access-tokens/
-  mapbox_maps_flutter: ^0.4.4
+#  mapbox_maps_flutter: ^0.4.4
 
   permission_handler: ^10.0.0
 

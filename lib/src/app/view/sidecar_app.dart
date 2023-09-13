@@ -15,34 +15,14 @@ class SideCarApp extends AppStatefulWidget {
 class _SideCarAppState extends AppState {
   _SideCarAppState()
       : super(
-          home: const SettingsPage(),
+          home: const SideCarHome(), //const SettingsPage(),
           inTitle: () => 'Demo App',
           debugShowCheckedModeBanner: false,
           useRouterConfig: false,
           useMaterial: true,
-          iOSTheme: const CupertinoThemeData(
-            scaffoldBackgroundColor: Color(0x007e827b),
-            textTheme: CupertinoTextThemeData(
-              textStyle: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          ),
           theme: ThemeData(
-            scaffoldBackgroundColor: const Color(0x007e827b),
+//            scaffoldBackgroundColor: const Color(0x007e827b),
             textTheme: const TextTheme(
-              titleLarge: TextStyle(
-                color: Colors.white,
-              ),
-              titleMedium: TextStyle(
-                color: Colors.white,
-              ),
-              titleSmall: TextStyle(
-                color: Colors.white,
-              ),
-              bodyLarge: TextStyle(
-                color: Colors.white,
-              ),
               bodyMedium: TextStyle(
                 color: Colors.white,
               ),
