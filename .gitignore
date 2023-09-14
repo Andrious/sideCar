@@ -105,23 +105,16 @@ google-services.json
 # Remember there's another one: /android/.gitignore
 
 
-# iOS/XCode related
-#GoogleService-Info.plist
-#/ios/
-#Info.plist
+# iOS/XCode related - See file: ios/.gitignore
+GoogleService-Info.plist
 
 # Linux related
-#/linux/
 
 # macro related
-/macros/
-/macos/
 
 # Web related
-#/web/
 
 # Windows related
-#/windows/
 
 App.framework
 Flutter.framework

@@ -108,14 +108,14 @@ class _SettingsPageState extends StateX<SettingsPage>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 MaterialButton(
-                  minWidth: 170.0,
+                  minWidth: 45.w,
                   color: con.kilometers ? Colors.yellow : Colors.white24,
                   textColor: con.kilometers ? Colors.black : Colors.white,
                   onPressed: con.onPressed.kilometers,
                   child: const Text('Kilometers'),
                 ),
                 MaterialButton(
-                  minWidth: 170.0,
+                  minWidth: 45.w,
                   color: !con.kilometers ? Colors.yellow : Colors.white24,
                   textColor: !con.kilometers ? Colors.black : Colors.white,
                   onPressed: con.onPressed.miles,

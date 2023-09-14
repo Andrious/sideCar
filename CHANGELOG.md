@@ -1,8 +1,10 @@
 
-## 0.2.0+2
+## 0.2.0+3
 September 13, 2023
 - Removed mapbox_gl
 - Returned mapbox_maps_flutter
+- Internalized token
+- Reposive interface
 
 ## 0.2.0
 September 12, 2023
