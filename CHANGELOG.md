@@ -1,5 +1,5 @@
 
-## 0.3.0
+## 0.2.0+1
 September 13, 2023
 - Removed mapbox_gl
 - Returned mapbox_maps_flutter
